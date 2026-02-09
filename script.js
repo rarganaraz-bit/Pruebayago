@@ -39,7 +39,6 @@ const textNodes = [
             { text: '5 minutos más', nextText: 3 }
         ]
     },
-    // RAMA: IR A CLASE
     {
         id: 2,
         text: 'Te levantaste. Estás en la parada y el colectivo viene explotado de gente. Si no subís, llegás tarde al parcial.',
@@ -56,7 +55,29 @@ const textNodes = [
             { text: 'Pasar por el buffet por un café salvador', nextText: 11 }
         ]
     },
-    // RAMA: SEGUIR DURMIENDO (TU PEDIDO)
+    // --- ESCENAS QUE FALTABAN ---
+    {
+        id: 7,
+        text: 'El siguiente colectivo tardó 40 minutos en pasar. Ya es demasiado tarde para el parcial.',
+        options: [
+            { text: 'Volver a casa derrotada', nextText: 15 }
+        ]
+    },
+    {
+        id: 11,
+        text: 'El café del buffet está espectacular. Te sentís con energías renovadas para enfrentar al profe.',
+        options: [
+            { text: 'Entrar al aula con confianza', nextText: 10 }
+        ]
+    },
+    {
+        id: 16,
+        text: 'Corriste tanto que llegaste toda transpirada, pero entraste justo a tiempo antes de que repartan las hojas.',
+        options: [
+            { text: 'Tomar aire y rendir', nextText: 18 }
+        ]
+    },
+    // ----------------------------
     {
         id: 3,
         text: 'Cerrás los ojos. De repente, entrás en un sueño profundo donde sos una estrella de rock. Estás en medio de un solo de guitarra...',
@@ -81,7 +102,6 @@ const textNodes = [
             { text: 'Ya fue, me quedo haciendo scroll en TikTok', nextText: 17 }
         ]
     },
-    // FINALES Y CONSECUENCIAS
     {
         id: 14,
         text: 'Tu amigo te dice que el profe se enfermó y el examen se pasó para el viernes. ¡El destino te ama!',
