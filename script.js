@@ -41,26 +41,39 @@ const textNodes = [
     },
     {
         id: 2,
-        text: 'Llegaste a tiempo, pero tenés un hambre voraz. ¿Qué hacés?',
+        text: 'Llegaste a la parada, pero el colectivo viene lleno. ¿Qué hacés?',
         options: [
-            { text: 'Comprar un alfajor en el buffet', nextText: 4 },
-            { text: 'Aguantar hasta el almuerzo', nextText: 5 }
+            { text: 'Subir igual (vas apretada)', nextText: 6 },
+            { text: 'Esperar al siguiente', nextText: 7 }
         ]
     },
     {
+        id: 6,
+        text: 'En el colectivo apretado, alguien te pisa. ¿Reaccionás?',
+        options: [
+            { text: 'Quejarse en voz alta', nextText: 8 },
+            { text: 'Suspirar y mirar por la ventana', nextText: 4 }
+        ]
+    },
+    {
+        id: 7,
+        text: 'El siguiente colectivo nunca pasó. Llegaste tardísimo y el profe no te dejó entrar. Fin del día.',
+        options: [{ text: 'Reiniciar aventura', nextText: -1 }]
+    },
+    {
+        id: 8,
+        text: 'Se arma una discusión y te pasás de parada. Terminaste en la otra punta de la ciudad.',
+        options: [{ text: 'Volver a casa (Reiniciar)', nextText: -1 }]
+    },
+    {
         id: 3,
-        text: 'Te despertaste al mediodía. Perdiste la asistencia pero estás descansada. Fin del día.',
+        text: 'Te despertaste al mediodía con 10 llamadas perdidas. Perdiste el día pero ganaste sueño.',
         options: [{ text: 'Reiniciar aventura', nextText: -1 }]
     },
     {
         id: 4,
-        text: 'El alfajor te dio energía y aprobaste el examen. ¡Victoria!',
-        options: [{ text: 'Jugar de nuevo', nextText: -1 }]
-    },
-    {
-        id: 5,
-        text: 'Te desmayaste de hambre en medio de la explicación. Qué bajón.',
-        options: [{ text: 'Intentar de nuevo', nextText: -1 }]
+        text: 'Llegaste a clase y el profe dice que el examen se canceló. ¡Es tu día de suerte!',
+        options: [{ text: 'Festejar (Jugar de nuevo)', nextText: -1 }]
     }
 ];
 
