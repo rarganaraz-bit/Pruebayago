@@ -33,47 +33,82 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Es lunes por la mañana y el despertador suena. Tenés clase en 20 minutos.',
+        text: 'Lunes, 7:00 AM. El despertador suena como una taladradora. Sentís que el cuerpo te pesa 200 kilos.',
         options: [
-            { text: 'Levantarse e ir a clase', nextText: 2 },
-            { text: 'Seguir durmiendo', nextText: 3 }
+            { text: 'Levantarse con heroísmo', nextText: 2 },
+            { text: '5 minutos más (el gran error)', nextText: 3 }
         ]
     },
+    // RAMA: IR A CLASE
     {
         id: 2,
-        text: 'Llegaste a la parada, pero el colectivo viene lleno. ¿Qué hacés?',
+        text: 'Te levantaste. Estás en la parada y el colectivo viene explotado de gente. Si no subís, llegás tarde al parcial.',
         options: [
-            { text: 'Subir igual (vas apretada)', nextText: 6 },
-            { text: 'Esperar al siguiente', nextText: 7 }
+            { text: 'Subir y viajar colgada de la puerta', nextText: 6 },
+            { text: 'Esperar el siguiente y rezar', nextText: 7 }
         ]
     },
     {
         id: 6,
-        text: 'En el colectivo apretado, alguien te pisa. ¿Reaccionás?',
+        text: 'Lograste entrar. Al lado tuyo alguien escucha música sin auriculares. El viaje es un suplicio, pero llegás.',
         options: [
-            { text: 'Quejarse en voz alta', nextText: 8 },
-            { text: 'Suspirar y mirar por la ventana', nextText: 4 }
+            { text: 'Ir directo al aula', nextText: 10 },
+            { text: 'Pasar por el buffet por un café salvador', nextText: 11 }
+        ]
+    },
+    // RAMA: SEGUIR DURMIENDO (TU PEDIDO)
+    {
+        id: 3,
+        text: 'Cerrás los ojos. De repente, entrás en un sueño profundo donde sos una estrella de rock. Estás en medio de un solo de guitarra...',
+        options: [
+            { text: 'Disfrutar el concierto en tu mente', nextText: 12 },
+            { text: 'Despertar de golpe por un ruido', nextText: 13 }
         ]
     },
     {
-        id: 7,
-        text: 'El siguiente colectivo nunca pasó. Llegaste tardísimo y el profe no te dejó entrar. Fin del día.',
-        options: [{ text: 'Reiniciar aventura', nextText: -1 }]
+        id: 12,
+        text: 'El público grita tu nombre. Pero el grito se transforma en la voz de tu mamá/roommate preguntando por qué no fuiste a rendir. Son las 11:30 AM.',
+        options: [
+            { text: 'Entrar en pánico y llamar a un compañero', nextText: 14 },
+            { text: 'Aceptar el fracaso y pedir delivery', nextText: 15 }
+        ]
     },
     {
-        id: 8,
-        text: 'Se arma una discusión y te pasás de parada. Terminaste en la otra punta de la ciudad.',
-        options: [{ text: 'Volver a casa (Reiniciar)', nextText: -1 }]
+        id: 13,
+        text: 'Te despertás asustada. Son las 8:15 AM. Si te cambiás en 2 minutos, quizás llegás a la segunda mitad.',
+        options: [
+            { text: 'Correr como si no hubiera un mañana', nextText: 16 },
+            { text: 'Ya fue, me quedo haciendo scroll en TikTok', nextText: 17 }
+        ]
+    },
+    // FINALES Y CONSECUENCIAS
+    {
+        id: 14,
+        text: 'Tu amigo te dice que el profe se enfermó y el examen se pasó para el viernes. ¡El destino te ama!',
+        options: [{ text: 'Celebrar y reiniciar', nextText: -1 }]
     },
     {
-        id: 3,
-        text: 'Te despertaste al mediodía con 10 llamadas perdidas. Perdiste el día pero ganaste sueño.',
-        options: [{ text: 'Reiniciar aventura', nextText: -1 }]
+        id: 15,
+        text: 'Gastaste tus últimos ahorros en una hamburguesa fría. Mañana será otro día (espero).',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
     },
     {
-        id: 4,
-        text: 'Llegaste a clase y el profe dice que el examen se canceló. ¡Es tu día de suerte!',
-        options: [{ text: 'Festejar (Jugar de nuevo)', nextText: -1 }]
+        id: 17,
+        text: 'Entraste en un bucle de videos de gatitos y recetas que nunca vas a hacer. Se hicieron las 4 de la tarde. No hiciste nada.',
+        options: [{ text: 'Intentar ser productiva mañana', nextText: -1 }]
+    },
+    {
+        id: 10,
+        text: 'Entrás al aula. El silencio es sepulcral. El examen ya empezó hace media hora. El profe te mira mal.',
+        options: [
+            { text: 'Sentarse y dar lo mejor', nextText: 18 },
+            { text: 'Pedir perdón e irse dignamente', nextText: 15 }
+        ]
+    },
+    {
+        id: 18,
+        text: 'Entregaste casi en blanco, pero el profe valoró tu esfuerzo y te puso un 4. ¡Aprobaste de milagro!',
+        options: [{ text: 'Ir de fiesta y reiniciar', nextText: -1 }]
     }
 ];
 
