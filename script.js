@@ -33,84 +33,80 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Lunes, 7:00 AM. El despertador suena.',
+        text: 'Es lunes por la mañana y el despertador suena. Tenés clase en 20 minutos.',
         options: [
-            { text: 'Levantarse', nextText: 2 },
-            { text: '5 minutos más', nextText: 3 }
+            { text: 'Levantarse e ir a clase', nextText: 2 },
+            { text: 'Seguir durmiendo un rato', nextText: 3 },
+            { text: 'Apagar el despertador y renunciar a todo', nextText: 30 }
         ]
     },
     {
         id: 2,
-        text: 'Te levantaste. Estás en la parada y el colectivo viene explotado de gente. Si no subís, llegás tarde al parcial.',
+        text: 'Llegaste a la parada, pero el colectivo viene lleno. ¿Qué hacés?',
         options: [
-            { text: 'Subir y viajar colgada de la puerta', nextText: 6 },
-            { text: 'Esperar el siguiente y rezar', nextText: 7 }
+            { text: 'Subir igual (vas apretada)', nextText: 6 },
+            { text: 'Esperar al siguiente', nextText: 7 },
+            { text: 'Ir caminando para hacer ejercicio', nextText: 40 }
         ]
     },
     {
         id: 6,
-        text: 'Lograste entrar. Al lado tuyo alguien escucha música sin auriculares. El viaje es un suplicio, pero llegás.',
+        text: 'En el colectivo apretado, alguien te pisa. ¿Reaccionás?',
         options: [
-            { text: 'Ir directo al aula', nextText: 10 },
-            { text: 'Pasar por el buffet por un café salvador', nextText: 11 }
+            { text: 'Quejarse en voz alta', nextText: 8 },
+            { text: 'Suspirar y mirar por la ventana', nextText: 4 },
+            { text: 'Bajarte en la siguiente parada del enojo', nextText: 50 }
         ]
     },
-    {
-        id: 7,
-        text: 'El siguiente colectivo llegó vacío y con aire acondicionado. Viajaste súper cómoda y llegaste relajada.',
-        options: [
-            { text: 'Entrar al aula feliz', nextText: 18 }
-        ]
-    },
-    {
-        id: 11,
-        text: 'El café te ayudó a despertar. Ahora vas al aula.',
-        options: [
-            { text: 'Entrar al aula', nextText: 10 }
-        ]
-    },
+    // RAMA: SEGUIR DURMIENDO
     {
         id: 3,
-        text: 'Cerrás los ojos. De repente, entrás en un sueño profundo donde sos una estrella de rock. Estás en medio de un solo de guitarra...',
+        text: 'Te despertás al mediodía con 10 llamadas perdidas. El sol entra por la ventana.',
         options: [
-            { text: 'Disfrutar el concierto en tu mente', nextText: 12 },
-            { text: 'Despertar de golpe por un ruido', nextText: 13 }
+            { text: 'Desayunar tranquila ya que perdiste el día', nextText: 60 },
+            { text: 'Limpiar la casa para compensar la culpa', nextText: 61 }
         ]
     },
+    // --- FINALES (Solo una opción: Reiniciar) ---
     {
-        id: 12,
-        text: 'El público grita tu nombre. Pero el grito se transforma en la voz de tu mamá preguntando por qué no fuiste a rendir. Son las 11:30 AM.',
-        options: [
-            { text: 'Reiniciar aventura', nextText: -1 }
-        ]
+        id: 7,
+        text: 'El siguiente colectivo llegó vacío y con aire acondicionado. Viajaste súper cómoda, llegaste relajada y el profe te felicitó por tu puntualidad.',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
     },
     {
-        id: 13,
-        text: 'Te despertás asustada. Son las 8:15 AM. Si te cambiás en 2 minutos, quizás llegás a la segunda mitad.',
-        options: [
-            { text: 'Correr como si no hubiera un mañana', nextText: 16 }
-        ]
+        id: 8,
+        text: 'Se arma una discusión gigante, el chofer te pide que te bajes y terminás perdida en la otra punta de la ciudad sin batería.',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
     },
     {
-        id: 16,
-        text: 'Llegaste corriendo y lograste entrar justo a tiempo.',
-        options: [
-            { text: 'Rendir el examen', nextText: 18 }
-        ]
+        id: 4,
+        text: 'Llegaste a clase justo a tiempo. El profe dice que el examen se canceló y que van a ver una película. ¡Día ganado!',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
     },
     {
-        id: 10,
-        text: 'Entrás al aula. El profe te saluda bien y te da la hoja. Tenés tiempo justo para terminar.',
-        options: [
-            { text: 'Sentarse y dar lo mejor', nextText: 18 }
-        ]
+        id: 30,
+        text: 'Te quedaste en la cama todo el día. No hiciste nada productivo, pero descansaste como nunca en tu vida.',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
     },
     {
-        id: 18,
-        text: '¡Es tu día de suerte! El examen fue un éxito y aprobaste con una nota excelente.',
-        options: [
-            { text: 'Festejar (Jugar de nuevo)', nextText: -1 }
-        ]
+        id: 40,
+        text: 'Caminaste tanto que encontraste un billete de 20 dólares en el piso. Te compraste un almuerzo increíble y no fuiste a clase.',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
+    },
+    {
+        id: 50,
+        text: 'Te bajaste del colectivo y justo pasaba un camión de helados. Te compraste uno y te volviste a tu casa feliz.',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
+    },
+    {
+        id: 60,
+        text: 'Te hiciste unos mates con tostadas. No rendiste el examen, pero tuviste una mañana de paz total.',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
+    },
+    {
+        id: 61,
+        text: 'La casa quedó brillante. Al menos la falta al parcial te sirvió para poner orden en tu vida.',
+        options: [{ text: 'Reiniciar vida', nextText: -1 }]
     }
 ];
 
