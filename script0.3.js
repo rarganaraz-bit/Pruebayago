@@ -67,7 +67,7 @@ const textNodes = [
     },
     {
         id: 12,
-        text: 'El público grita tu nombre. Pero el grito se transforma en la voz de tu mamá/roommate preguntando por qué no fuiste a rendir. Son las 11:30 AM.',
+        text: 'El público grita tu nombre. Pero el grito se transforma en la voz de tu mamá preguntando por qué no fuiste a rendir. Son las 11:30 AM.',
         options: [
             { text: 'Entrar en pánico y llamar a un compañero', nextText: 14 },
             { text: 'Aceptar el fracaso y pedir delivery', nextText: 15 }
@@ -89,7 +89,7 @@ const textNodes = [
     },
     {
         id: 15,
-        text: 'Gastaste tus últimos ahorros en una hamburguesa fría. Mañana será otro día (espero).',
+        text: 'Gastaste tus últimos ahorros en una hamburguesa fría. Mañana será otro día.',
         options: [{ text: 'Reiniciar vida', nextText: -1 }]
     },
     {
