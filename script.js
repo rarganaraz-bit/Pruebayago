@@ -55,29 +55,20 @@ const textNodes = [
             { text: 'Pasar por el buffet por un café salvador', nextText: 11 }
         ]
     },
-    // --- ESCENAS QUE FALTABAN ---
     {
         id: 7,
-        text: 'El siguiente colectivo tardó 40 minutos en pasar. Ya es demasiado tarde para el parcial.',
+        text: 'El siguiente colectivo nunca pasó. Llegaste tarde y no pudiste rendir.',
         options: [
-            { text: 'Volver a casa derrotada', nextText: 15 }
+            { text: 'Reiniciar vida', nextText: -1 }
         ]
     },
     {
         id: 11,
-        text: 'El café del buffet está espectacular. Te sentís con energías renovadas para enfrentar al profe.',
+        text: 'El café te ayudó a despertar. Ahora vas al aula.',
         options: [
-            { text: 'Entrar al aula con confianza', nextText: 10 }
+            { text: 'Entrar al aula', nextText: 10 }
         ]
     },
-    {
-        id: 16,
-        text: 'Corriste tanto que llegaste toda transpirada, pero entraste justo a tiempo antes de que repartan las hojas.',
-        options: [
-            { text: 'Tomar aire y rendir', nextText: 18 }
-        ]
-    },
-    // ----------------------------
     {
         id: 3,
         text: 'Cerrás los ojos. De repente, entrás en un sueño profundo donde sos una estrella de rock. Estás en medio de un solo de guitarra...',
@@ -103,19 +94,32 @@ const textNodes = [
         ]
     },
     {
+        id: 16,
+        text: 'Llegaste corriendo y lograste entrar.',
+        options: [
+            { text: 'Rendir el examen', nextText: 18 }
+        ]
+    },
+    {
         id: 14,
         text: 'Tu amigo te dice que el profe se enfermó y el examen se pasó para el viernes. ¡El destino te ama!',
-        options: [{ text: 'Celebrar y reiniciar', nextText: -1 }]
+        options: [
+            { text: 'Celebrar y reiniciar', nextText: -1 }
+        ]
     },
     {
         id: 15,
         text: 'Gastaste tus últimos ahorros en una hamburguesa fría. Mañana será otro día.',
-        options: [{ text: 'Reiniciar vida', nextText: -1 }]
+        options: [
+            { text: 'Reiniciar vida', nextText: -1 }
+        ]
     },
     {
         id: 17,
         text: 'Entraste en un bucle de videos de gatitos y recetas que nunca vas a hacer. Se hicieron las 4 de la tarde. No hiciste nada.',
-        options: [{ text: 'Intentar ser productiva mañana', nextText: -1 }]
+        options: [
+            { text: 'Reiniciar vida', nextText: -1 }
+        ]
     },
     {
         id: 10,
@@ -128,7 +132,9 @@ const textNodes = [
     {
         id: 18,
         text: 'Entregaste casi en blanco, pero el profe valoró tu esfuerzo y te puso un 4. ¡Aprobaste de milagro!',
-        options: [{ text: 'Ir de fiesta y reiniciar', nextText: -1 }]
+        options: [
+            { text: 'Ir de fiesta y reiniciar', nextText: -1 }
+        ]
     }
 ];
 
