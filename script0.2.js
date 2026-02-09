@@ -33,10 +33,10 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'Lunes, 7:00 AM. El despertador suena como una taladradora. Sentís que el cuerpo te pesa 200 kilos.',
+        text: 'Lunes, 7:00 AM. El despertador suena.',
         options: [
-            { text: 'Levantarse con heroísmo', nextText: 2 },
-            { text: '5 minutos más (el gran error)', nextText: 3 }
+            { text: 'Levantarse', nextText: 2 },
+            { text: '5 minutos más', nextText: 3 }
         ]
     },
     // RAMA: IR A CLASE
