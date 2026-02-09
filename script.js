@@ -57,9 +57,9 @@ const textNodes = [
     },
     {
         id: 7,
-        text: 'El siguiente colectivo nunca pasó. Llegaste tarde y no pudiste rendir.',
+        text: 'El siguiente colectivo llegó vacío y con aire acondicionado. Viajaste súper cómoda y llegaste relajada.',
         options: [
-            { text: 'Reiniciar vida', nextText: -1 }
+            { text: 'Entrar al aula feliz', nextText: 18 }
         ]
     },
     {
@@ -81,59 +81,35 @@ const textNodes = [
         id: 12,
         text: 'El público grita tu nombre. Pero el grito se transforma en la voz de tu mamá preguntando por qué no fuiste a rendir. Son las 11:30 AM.',
         options: [
-            { text: 'Entrar en pánico y llamar a un compañero', nextText: 14 },
-            { text: 'Aceptar el fracaso y pedir delivery', nextText: 15 }
+            { text: 'Reiniciar aventura', nextText: -1 }
         ]
     },
     {
         id: 13,
         text: 'Te despertás asustada. Son las 8:15 AM. Si te cambiás en 2 minutos, quizás llegás a la segunda mitad.',
         options: [
-            { text: 'Correr como si no hubiera un mañana', nextText: 16 },
-            { text: 'Ya fue, me quedo haciendo scroll en TikTok', nextText: 17 }
+            { text: 'Correr como si no hubiera un mañana', nextText: 16 }
         ]
     },
     {
         id: 16,
-        text: 'Llegaste corriendo y lograste entrar.',
+        text: 'Llegaste corriendo y lograste entrar justo a tiempo.',
         options: [
             { text: 'Rendir el examen', nextText: 18 }
         ]
     },
     {
-        id: 14,
-        text: 'Tu amigo te dice que el profe se enfermó y el examen se pasó para el viernes. ¡El destino te ama!',
-        options: [
-            { text: 'Celebrar y reiniciar', nextText: -1 }
-        ]
-    },
-    {
-        id: 15,
-        text: 'Gastaste tus últimos ahorros en una hamburguesa fría. Mañana será otro día.',
-        options: [
-            { text: 'Reiniciar vida', nextText: -1 }
-        ]
-    },
-    {
-        id: 17,
-        text: 'Entraste en un bucle de videos de gatitos y recetas que nunca vas a hacer. Se hicieron las 4 de la tarde. No hiciste nada.',
-        options: [
-            { text: 'Reiniciar vida', nextText: -1 }
-        ]
-    },
-    {
         id: 10,
-        text: 'Entrás al aula. El silencio es sepulcral. El examen ya empezó hace media hora. El profe te mira mal.',
+        text: 'Entrás al aula. El profe te saluda bien y te da la hoja. Tenés tiempo justo para terminar.',
         options: [
-            { text: 'Sentarse y dar lo mejor', nextText: 18 },
-            { text: 'Pedir perdón e irse dignamente', nextText: 15 }
+            { text: 'Sentarse y dar lo mejor', nextText: 18 }
         ]
     },
     {
         id: 18,
-        text: 'Entregaste casi en blanco, pero el profe valoró tu esfuerzo y te puso un 4. ¡Aprobaste de milagro!',
+        text: '¡Es tu día de suerte! El examen fue un éxito y aprobaste con una nota excelente.',
         options: [
-            { text: 'Ir de fiesta y reiniciar', nextText: -1 }
+            { text: 'Festejar (Jugar de nuevo)', nextText: -1 }
         ]
     }
 ];
